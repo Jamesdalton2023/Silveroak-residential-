@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the SilverOak Residential Properties leadership team and learn our story.">
+  <title>About &amp; Team | SilverOak Residential Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="SilverOak Residential Properties" width="48" height="48">
+        <div class="logo-text">SilverOak<span>Residential Properties</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="homes.html">Homes</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="residents.html">Residents</a></li>
+        <li><a href="referrals.html">Referrals</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="contact.html" class="nav-cta">Schedule a Tour</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="about.html" onclick="closeMobile()">About &amp; Team</a>
+    <a href="homes.html" onclick="closeMobile()">Available Homes</a>
+    <a href="communities.html" onclick="closeMobile()">Communities</a>
+    <a href="residents.html" onclick="closeMobile()">Residents</a>
+    <a href="referrals.html" onclick="closeMobile()">Referrals</a>
+    <a href="faq.html" onclick="closeMobile()">FAQs</a>
+    <a href="contact.html" class="nav-cta" onclick="closeMobile()">Schedule a Tour</a>
+  </div>
+
+  <section class="page-hero photo-meet">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Our Crew</div>
+        <h1>Meet the people behind <span>SilverOak</span></h1>
+        <p>A client-focused team of residential professionals who bring experience, care, and a genuine personal touch to every home we manage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal"><img src="team-meeting.jpg" alt="SilverOak team collaborating"></div>
+        <div class="about-content reveal">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Quality residences. Dependable service.</h2>
+          <p>SilverOak Residential Properties was built around a simple idea: finding a home should feel clear, personal, and worth the trust residents place in us. Since 2017 we have selected, leased, and cared for residences for professionals, families, students, expats, and corporate clients.</p>
+          <p>Trusting your search to our crew is like embarking on a journey home. Each team member is dedicated to guiding people toward their specific goals — and to building relationships that last beyond the lease signing.</p>
+          <div class="hero-stats" style="color:var(--blue-900);margin-top:1.5rem">
+            <div class="hero-stat"><strong style="color:var(--blue-800)">112+</strong><span style="color:var(--gray-500)">Properties Managed</span></div>
+            <div class="hero-stat"><strong style="color:var(--blue-800)">85</strong><span style="color:var(--gray-500)">Homes Leased</span></div>
+            <div class="hero-stat"><strong style="color:var(--blue-800)">8+</strong><span style="color:var(--gray-500)">Years of Service</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="team">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Leadership</span>
+        <h2 class="section-title">The SilverOak team</h2>
+        <p class="section-subtitle">Portraits are in place for six teammates. Bryan Smith and Bryn Straun still use placeholders until headshots arrive.</p>
+      </div>
+      <div class="team-grid">
+        <article class="team-card reveal">
+          <div class="team-photo"><img src="team-guy-bond.jpg" alt="Guy Bond"></div>
+          <div class="team-body">
+            <h3>Guy Bond</h3>
+            <div class="team-role">Cofounder &amp; Chief Executive Officer</div>
+            <p class="team-loc">Sets the vision for elevated living and long-term resident relationships.</p>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-photo"><img src="team-ed-gal.jpg" alt="Ed Gal"></div>
+          <div class="team-body">
+            <h3>Ed Gal</h3>
+            <div class="team-role">Cofounder &amp; Chief Innovation Officer</div>
+            <p class="team-loc">Leads how SilverOak improves the rental experience with better tools and process.</p>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-photo"><img src="team-larry-saunders.jpg" alt="Larry Saunders"></div>
+          <div class="team-body">
+            <h3>Larry Saunders</h3>
+            <div class="team-role">Cofounder &amp; Chief Broker Officer</div>
+            <p class="team-loc">Oversees brokerage standards, leasing integrity, and partner relationships.</p>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-photo"><img src="team-elizabeth-tse.jpg" alt="Elizabeth Tse"></div>
+          <div class="team-body">
+            <h3>Elizabeth Tse</h3>
+            <div class="team-role">Chief Operating Officer</div>
+            <p class="team-loc">Runs day-to-day operations so residents and owners experience consistent service.</p>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-photo"><img src="team-cj-napolitano.jpg" alt="Carlos CJ Napolitano"></div>
+          <div class="team-body">
+            <h3>Carlos “CJ” Napolitano</h3>
+            <div class="team-role">Chief Financial Officer</div>
+            <p class="team-loc">Stewards financial discipline across the portfolio and resident accounting.</p>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-photo"><div class="avatar-initials">BS</div><span class="placeholder-tag">Photo placeholder</span></div>
+          <div class="team-body">
+            <h3>Bryan Smith</h3>
+            <div class="team-role">Chief Technology Officer</div>
+            <p class="team-loc">Builds the digital experience behind tours, applications, and the resident portal.</p>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-photo"><img src="team-jobe-steinberg.jpg" alt="Jobe N. Steinberg"></div>
+          <div class="team-body">
+            <h3>Jobe N. Steinberg</h3>
+            <div class="team-role">Managing Broker of New York</div>
+            <p class="team-loc">New York · Licensed managing broker supporting East Coast operations.</p>
+          </div>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-photo"><div class="avatar-initials">BS</div><span class="placeholder-tag">Photo placeholder</span></div>
+          <div class="team-body">
+            <h3>Bryn Straun</h3>
+            <div class="team-role">Bayside Real Estate Partners</div>
+            <p class="team-loc">Manhattan Beach, CA · Coastal partnerships and resident placement.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="media-split">
+        <img class="reveal" src="hands-together.jpg" alt="SilverOak team working as one">
+        <div class="reveal">
+          <span class="section-label">How we work</span>
+          <h2 class="section-title">One crew. Clear accountability.</h2>
+          <p style="color:var(--gray-600);margin-bottom:1rem">Leasing, operations, finance, and technology sit at the same table. That is how a tour stays simple and a maintenance request gets an owner.</p>
+          <a href="contact.html" class="btn-navy">Talk with the team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container text-center reveal">
+      <span class="section-label">Let's Talk</span>
+      <h2 class="section-title">You’ve got questions. We can’t wait to answer them.</h2>
+      <p class="section-subtitle">Whether you are touring a home, referring a friend, or joining the team — start a conversation.</p>
+      <a href="contact.html" class="btn-navy">Contact Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text" style="color:white;margin-bottom:0.75rem">SilverOak<span style="color:var(--blue-300)">Residential Properties</span></div>
+          <p>Quality residences. Dependable service. A simpler rental experience.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul>
+          <li><a href="index.html">Home</a></li><li><a href="homes.html">Available Homes</a></li>
+          <li><a href="about.html">About &amp; Team</a></li><li><a href="referrals.html">Submit a Referral</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Resident Resources</h4><ul>
+          <li><a href="residents.html">Resident Portal</a></li><li><a href="residents.html#maintenance">Maintenance Request</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul>
+          <li><a href="mailto:silveroakresidentialproperties@outlook.com">General Email</a></li>
+          <li><a href="tel:+19373054420">+1 (937) 305-4420</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 SilverOak Residential Properties. All Rights Reserved. <a href="privacy.html">Privacy Policy</a> <a href="terms.html">Terms of Use</a> <a href="rental-criteria.html">Rental Criteria</a> <a href="accessibility.html">Accessibility</a></div>
+        <div class="equal-housing">Equal Housing Opportunity</div>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

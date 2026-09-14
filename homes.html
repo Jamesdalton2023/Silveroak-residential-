@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse SilverOak available apartments, packages, and interior galleries.">
+  <title>Available Homes | SilverOak Residential Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><img src="logo.png" alt="SilverOak" width="48" height="48"><div class="logo-text">SilverOak<span>Residential Properties</span></div></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="homes.html" class="active">Homes</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="residents.html">Residents</a></li>
+        <li><a href="referrals.html">Referrals</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="contact.html" class="nav-cta">Schedule a Tour</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="about.html" onclick="closeMobile()">About</a>
+    <a href="homes.html" onclick="closeMobile()">Homes</a>
+    <a href="communities.html" onclick="closeMobile()">Communities</a>
+    <a href="residents.html" onclick="closeMobile()">Residents</a>
+    <a href="referrals.html" onclick="closeMobile()">Referrals</a>
+    <a href="faq.html" onclick="closeMobile()">FAQs</a>
+    <a href="contact.html" class="nav-cta" onclick="closeMobile()">Schedule a Tour</a>
+  </div>
+
+  <section class="page-hero photo-5">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Available Residences</div>
+        <h1>Homes selected for <span>how you live</span></h1>
+        <p>Browse representative residences, compare packages, and schedule a private in-person or virtual tour. Pricing is illustrative — contact leasing for current rates and availability.</p>
+        <div class="hero-ctas"><a href="contact.html" class="btn-primary">Schedule a private tour</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Listings</span>
+        <h2 class="section-title">Featured residences</h2>
+        <p class="section-subtitle">Photos are from our maintained portfolio. Amenities vary by property.</p>
+      </div>
+      <div class="homes-grid">
+        <article class="home-card reveal"><div class="photo"><img src="gallery5.jpg" alt="Modern kitchen"><span class="home-badge">Signature</span><span class="home-price">$1,650/mo</span></div><div class="home-body"><h3>The Oak House</h3><p class="home-meta">Premium finishes · Priority maintenance</p><div class="home-specs"><span>2 Bed</span><span>2 Bath</span><span>Kitchen</span></div><a href="contact.html" class="btn-sm">Request a tour →</a></div></article>
+        <article class="home-card reveal"><div class="photo"><img src="gallery2.jpg" alt="Living room"><span class="home-badge">Essential</span><span class="home-price">$1,200/mo</span></div><div class="home-body"><h3>Riverside Residence</h3><p class="home-meta">Comfortable living · Resident portal</p><div class="home-specs"><span>1 Bed</span><span>1 Bath</span><span>Laundry</span></div><a href="contact.html" class="btn-sm">Request a tour →</a></div></article>
+        <article class="home-card reveal"><div class="photo"><img src="gallery9.jpg" alt="Living room fireplace"><span class="home-badge">Premier</span><span class="home-price">$2,200/mo</span></div><div class="home-body"><h3>Hearth Collection</h3><p class="home-meta">Expanded living · Personalized move-in</p><div class="home-specs"><span>3 Bed</span><span>2 Bath</span><span>Fireplace</span></div><a href="contact.html" class="btn-sm">Request a tour →</a></div></article>
+        <article class="home-card reveal"><div class="photo"><img src="gallery13.jpg" alt="Luxury bathroom"><span class="home-badge">Signature</span><span class="home-price">$1,650/mo</span></div><div class="home-body"><h3>Atrium Suite</h3><p class="home-meta">Updated baths · Quality finishes</p><div class="home-specs"><span>2 Bed</span><span>2 Bath</span><span>Ensuite</span></div><a href="contact.html" class="btn-sm">Request a tour →</a></div></article>
+        <article class="home-card reveal"><div class="photo"><img src="gallery10.jpg" alt="Outdoor space"><span class="home-badge">Premier</span><span class="home-price">$2,200/mo</span></div><div class="home-body"><h3>Garden Court</h3><p class="home-meta">Outdoor space · Convenient location</p><div class="home-specs"><span>2 Bed</span><span>2 Bath</span><span>Yard</span></div><a href="contact.html" class="btn-sm">Request a tour →</a></div></article>
+        <article class="home-card reveal"><div class="photo"><img src="gallery7.jpg" alt="Dining area"><span class="home-badge">Essential</span><span class="home-price">$1,200/mo</span></div><div class="home-body"><h3>Harbor Dining Loft</h3><p class="home-meta">Natural light · Ample storage</p><div class="home-specs"><span>Studio</span><span>1 Bath</span><span>Dining</span></div><a href="contact.html" class="btn-sm">Request a tour →</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" style="background:var(--off-white)">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Find the Right Fit</span>
+        <h2 class="section-title">Packages &amp; pricing</h2>
+        <p class="section-subtitle">Choose the level of comfort and service that matches your lifestyle. Contact us for current rates.</p>
+      </div>
+      <div class="packages-grid">
+        <div class="package-card reveal">
+          <div class="package-name">SilverOak Essential</div>
+          <div class="package-price">$1,200<span>/mo</span></div>
+          <p class="package-desc">A comfortable, practical home with the essentials you need.</p>
+          <ul class="package-features">
+            <li>Quality apartment residence</li>
+            <li>Standard maintenance support</li>
+            <li>Resident portal access</li>
+            <li>Secure application process</li>
+            <li>Convenient move-in assistance</li>
+          </ul>
+          <a href="contact.html" class="package-btn">Learn More</a>
+        </div>
+        <div class="package-card popular reveal">
+          <div class="package-name">SilverOak Signature</div>
+          <div class="package-price">$1,650<span>/mo</span></div>
+          <p class="package-desc">Our most popular option — comfort, convenience, and elevated living.</p>
+          <ul class="package-features">
+            <li>Everything in Essential</li>
+            <li>Premium apartment finishes</li>
+            <li>Enhanced property amenities</li>
+            <li>Priority maintenance support</li>
+            <li>Dedicated resident assistance</li>
+            <li>Flexible move-in options</li>
+          </ul>
+          <a href="contact.html" class="package-btn">Choose Signature</a>
+        </div>
+        <div class="package-card reveal">
+          <div class="package-name">SilverOak Premier</div>
+          <div class="package-price">$2,200<span>/mo</span></div>
+          <p class="package-desc">Extra space, style, and personalized service.</p>
+          <ul class="package-features">
+            <li>Everything in Signature</li>
+            <li>Premium / luxury residence options</li>
+            <li>Expanded living spaces</li>
+            <li>Enhanced amenities</li>
+            <li>Priority resident support</li>
+            <li>Personalized move-in assistance</li>
+          </ul>
+          <a href="contact.html" class="package-btn">Choose Premier</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Inside Our Residences</span>
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-subtitle">Modern kitchens, spacious living areas, and refined finishes.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery1.jpg" alt="Hallway with hardwood floors"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery2.jpg" alt="Spacious living room"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery3.jpg" alt="Bright living area"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery4.jpg" alt="Laundry and storage"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery5.jpg" alt="Modern kitchen"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery6.jpg" alt="Empty living space"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery7.jpg" alt="Elegant dining area"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery8.jpg" alt="Kitchen and storage"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery9.jpg" alt="Living room with fireplace"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery10.jpg" alt="Backyard and outdoor space"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery11.jpg" alt="Dining nook"></div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)"><img src="gallery13.jpg" alt="Luxury bathroom"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="amenities">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Comfortable Living</span>
+        <h2 class="section-title">Amenities designed for you</h2>
+      </div>
+      <div class="amenities-grid">
+        <div class="amenity-group reveal">
+          <h3>Home Features</h3>
+          <ul class="amenity-list">
+            <li>Modern kitchens</li><li>Updated bathrooms</li><li>Spacious living areas</li><li>Ample storage</li>
+            <li>Comfortable bedrooms</li><li>Quality finishes</li><li>Natural light</li><li>In-unit or on-site laundry*</li>
+          </ul>
+        </div>
+        <div class="amenity-group reveal">
+          <h3>Community Amenities</h3>
+          <ul class="amenity-list">
+            <li>Parking options*</li><li>Secure entry*</li><li>Outdoor spaces*</li>
+            <li>Fitness facilities*</li><li>Resident areas*</li><li>Convenient locations</li>
+          </ul>
+          <p class="amenity-note">*Amenities vary by property. See individual listings for specific features.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container reveal">
+      <h2>Ready to walk through a home?</h2>
+      <p>Schedule an in-person or virtual tour. A leasing specialist will confirm a time that works for you.</p>
+      <a href="contact.html" class="btn-primary">Schedule my tour →</a>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img id="lightboxImg" src="" alt="Apartment photo">
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo-text" style="color:white;margin-bottom:0.75rem">SilverOak<span style="color:var(--blue-300)">Residential Properties</span></div><p>Find Your Place. Feel at Home.</p></div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">Team</a></li><li><a href="referrals.html">Referrals</a></li></ul></div>
+        <div class="footer-col"><h4>Residents</h4><ul><li><a href="residents.html">Portal</a></li><li><a href="faq.html">FAQs</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+19373054420">+1 (937) 305-4420</a></li><li><a href="contact.html">Schedule a Tour</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><div>© 2026 SilverOak Residential Properties. <a href="privacy.html">Privacy</a> <a href="terms.html">Terms</a> <a href="rental-criteria.html">Rental Criteria</a> <a href="accessibility.html">Accessibility</a></div><div class="equal-housing">Equal Housing Opportunity</div></div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

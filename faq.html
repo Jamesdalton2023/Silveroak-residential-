@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs | SilverOak Residential Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><img src="logo.png" alt="SilverOak" width="48" height="48"><div class="logo-text">SilverOak<span>Residential Properties</span></div></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="homes.html">Homes</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="residents.html">Residents</a></li>
+        <li><a href="referrals.html">Referrals</a></li>
+        <li><a href="faq.html" class="active">FAQs</a></li>
+        <li><a href="contact.html" class="nav-cta">Schedule a Tour</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="faq.html" onclick="closeMobile()">FAQs</a>
+    <a href="contact.html" class="nav-cta" onclick="closeMobile()">Schedule a Tour</a>
+  </div>
+
+  <section class="page-hero photo-meet">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Help Center</div>
+        <h1>Frequently asked <span>questions</span></h1>
+        <p>Quick answers about touring, applying, living with SilverOak, and referrals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <div class="faq-list">
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">How do I schedule an apartment tour?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Use the Schedule a Tour form. Choose a property, date, and time. Our team will contact you to confirm an in-person or virtual visit.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">How do I apply for a property?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">After a tour or inquiry, leasing will send application instructions for that specific residence.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">What documents are required to apply?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Requirements vary by property. Typical items include identification, income verification, and rental history. See Rental Criteria for the general standard.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">How long does the application process take?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Timing depends on the property and whether all required information has been received. We keep you informed at each step.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Are utilities included in the rent?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Utility arrangements vary by property. Check the listing or ask leasing for details on the home you want.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Are pets allowed?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Pet policies vary by residence. Ask about the specific property. Assistance animals are handled under applicable fair housing law.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Can I schedule a virtual tour?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes, where available. Select Virtual on the tour form.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">How does the resident referral credit work?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Refer a renter through the Referrals page. When they sign a qualifying lease and move in, you receive a $250–$500 rent credit depending on the package. Self-referrals are not eligible.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">How do current residents request maintenance?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Use the form on the Residents page, or email support. Emergencies should be phoned in immediately.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">How can I contact SilverOak?<span class="arrow">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Call or text +1 (937) 305-4420, email silveroakresidentialproperties@outlook.com, or use the contact form.</div></div></div>
+      </div>
+      <div class="text-center" style="margin-top:2rem"><a href="contact.html" class="btn-navy">Still have questions? Contact us</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border:0"><div>© 2026 SilverOak Residential Properties. <a href="privacy.html">Privacy</a> <a href="terms.html">Terms</a> <a href="rental-criteria.html">Rental Criteria</a> <a href="accessibility.html">Accessibility</a></div><div class="equal-housing">Equal Housing Opportunity</div></div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

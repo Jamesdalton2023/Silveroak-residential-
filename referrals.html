@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Refer a renter and earn a credit, or submit a partner referral to SilverOak Residential Properties.">
+  <title>Submit a Referral | SilverOak Residential Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><img src="logo.png" alt="SilverOak" width="48" height="48"><div class="logo-text">SilverOak<span>Residential Properties</span></div></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="homes.html">Homes</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="residents.html">Residents</a></li>
+        <li><a href="referrals.html" class="active">Referrals</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="contact.html" class="nav-cta">Schedule a Tour</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="about.html" onclick="closeMobile()">About</a>
+    <a href="homes.html" onclick="closeMobile()">Homes</a>
+    <a href="referrals.html" onclick="closeMobile()">Referrals</a>
+    <a href="contact.html" class="nav-cta" onclick="closeMobile()">Schedule a Tour</a>
+  </div>
+
+  <section class="page-hero photo-shake">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Referral Programs</div>
+        <h1>Refer a renter. <span>Get a credit.</span></h1>
+        <p>Know someone looking for a quality home — or a property owner who needs dependable management? Submit a referral and we’ll take it from there.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="two-col">
+        <div class="ref-card reveal">
+          <span class="section-label">For Residents &amp; Friends</span>
+          <h3>Refer a Rental, Get a Credit</h3>
+          <p style="color:var(--gray-600);margin:0.6rem 0 0.4rem">When someone you refer signs a qualifying SilverOak lease, you receive a rent credit. Current residents and recent tour guests can participate.</p>
+          <ul class="steps">
+            <li>Identify someone who is seriously looking for a rental.</li>
+            <li>Complete the resident referral form below.</li>
+            <li>We contact your referral within one business day.</li>
+            <li>When they sign and move in, you receive a $250–$500 rent credit (amount depends on the package they lease).</li>
+          </ul>
+          <p style="font-size:0.82rem;color:var(--gray-500)">Credits are issued after the referred resident’s lease begins and the first month’s rent has posted. One credit per referred household. Self-referrals are not eligible.</p>
+        </div>
+        <div class="ref-card reveal">
+          <span class="section-label">For Partners &amp; Owners</span>
+          <h3>Submit a Partner Referral</h3>
+          <p style="color:var(--gray-600);margin:0.6rem 0 0.4rem">Refer a property owner, corporate housing client, or trusted professional who would benefit from SilverOak management. Qualified introductions are reviewed by our leadership team.</p>
+          <ul class="steps">
+            <li>Nominate an owner or partner you know personally.</li>
+            <li>Make a warm introduction after you submit the form.</li>
+            <li>Our team schedules a discovery conversation.</li>
+            <li>If they engage SilverOak, you receive recognition and a referral honorarium outlined at onboarding.</li>
+          </ul>
+          <p style="font-size:0.82rem;color:var(--gray-500)">You are not eligible for an honorarium when referring business to a portfolio you already own or manage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="media-split">
+        <img class="reveal" src="meeting-handshake.jpg" alt="Introducing a referral to SilverOak">
+        <div class="reveal">
+          <span class="section-label">Warm introductions</span>
+          <h2 class="section-title">You make the introduction. We handle the rest.</h2>
+          <p style="color:var(--gray-600)">Every referral starts with a person you already trust. We follow up within one business day and keep you copied when the conversation begins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--off-white);padding-top:3rem">
+    <div class="container">
+      <div class="two-col">
+        <div class="card-form reveal">
+          <h3 class="serif" style="margin-bottom:0.8rem">Resident referral form</h3>
+          <form onsubmit="handleForm(event, 'Submit resident referral')">
+            <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+            <div class="form-group"><label for="r_yourName">Your full name *</label><input id="r_yourName" name="yourName" required placeholder="Your name"></div>
+            <div class="form-row">
+              <div class="form-group"><label for="r_yourEmail">Your email *</label><input id="r_yourEmail" type="email" name="yourEmail" required placeholder="you@example.com"></div>
+              <div class="form-group"><label for="r_yourPhone">Your phone *</label><input id="r_yourPhone" type="tel" name="yourPhone" required placeholder="+1 (555) 000-0000"></div>
+            </div>
+            <div class="form-group"><label for="r_status">You are</label>
+              <select id="r_status" name="status">
+                <option>Current resident</option>
+                <option>Past resident</option>
+                <option>Recent tour guest</option>
+                <option>Friend of SilverOak</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="r_refName">Referral full name *</label><input id="r_refName" name="refName" required placeholder="Their name"></div>
+            <div class="form-row">
+              <div class="form-group"><label for="r_refEmail">Referral email *</label><input id="r_refEmail" type="email" name="refEmail" required></div>
+              <div class="form-group"><label for="r_refPhone">Referral phone</label><input id="r_refPhone" type="tel" name="refPhone"></div>
+            </div>
+            <div class="form-group"><label for="r_need">What are they looking for?</label>
+              <select id="r_need" name="need">
+                <option value="">Select</option>
+                <option>Studio / 1 bedroom</option>
+                <option>2 bedrooms</option>
+                <option>3+ bedrooms</option>
+                <option>Furnished / short-term</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="r_notes">How do you know them?</label><textarea id="r_notes" name="notes" placeholder="A short note helps us make a thoughtful introduction."></textarea></div>
+            <div class="checkbox-group"><input type="checkbox" id="r_consent" required><label for="r_consent">I confirm I have permission to share this person’s contact details and agree to be contacted about this referral.</label></div>
+            <div class="captcha-box">
+              <label><input type="checkbox" id="r_captcha"> I’m not a robot</label>
+              <div class="captcha-brand">reCAPTCHA<small>Privacy · Terms</small></div>
+            </div>
+            <p class="captcha-error">Please confirm you are not a robot.</p>
+            <button type="submit" class="form-submit">Submit resident referral</button>
+            <p class="form-note">We’ll email your referral and copy you when the introduction is made.</p>
+          </form>
+        </div>
+
+        <div class="card-form reveal">
+          <h3 class="serif" style="margin-bottom:0.8rem">Partner referral form</h3>
+          <form onsubmit="handleForm(event, 'Submit partner referral')">
+            <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+            <div class="form-group"><label for="p_yourName">Your full name *</label><input id="p_yourName" required placeholder="Your name"></div>
+            <div class="form-row">
+              <div class="form-group"><label for="p_yourEmail">Your email *</label><input id="p_yourEmail" type="email" required></div>
+              <div class="form-group"><label for="p_yourPhone">Your phone *</label><input id="p_yourPhone" type="tel" required></div>
+            </div>
+            <div class="form-group"><label for="p_company">Your company / role</label><input id="p_company" placeholder="Broker, owner, advisor…"></div>
+            <div class="form-group"><label for="p_refName">Referral name *</label><input id="p_refName" required></div>
+            <div class="form-row">
+              <div class="form-group"><label for="p_refEmail">Referral email *</label><input id="p_refEmail" type="email" required></div>
+              <div class="form-group"><label for="p_refPhone">Referral phone</label><input id="p_refPhone" type="tel"></div>
+            </div>
+            <div class="form-group"><label for="p_type">Referral type</label>
+              <select id="p_type">
+                <option>Property owner seeking management</option>
+                <option>Corporate / group housing client</option>
+                <option>Licensed agent or broker</option>
+                <option>Other professional partner</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="p_notes">Why are they a good fit?</label><textarea id="p_notes" placeholder="Portfolio size, location, timing…"></textarea></div>
+            <div class="checkbox-group"><input type="checkbox" id="p_consent" required><label for="p_consent">By submitting, I agree to receive communications from SilverOak about this referral. See our Privacy Policy and Terms of Use.</label></div>
+            <div class="captcha-box">
+              <label><input type="checkbox" id="p_captcha"> I’m not a robot</label>
+              <div class="captcha-brand">reCAPTCHA<small>Privacy · Terms</small></div>
+            </div>
+            <p class="captcha-error">Please confirm you are not a robot.</p>
+            <button type="submit" class="form-submit">Submit partner referral</button>
+            <p class="form-note">A SilverOak lead will follow up with you within one business day.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo-text" style="color:white;margin-bottom:0.75rem">SilverOak<span style="color:var(--blue-300)">Residential Properties</span></div><p>Find Your Place. Feel at Home.</p></div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="homes.html">Homes</a></li><li><a href="about.html">Team</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:silveroakresidentialproperties@outlook.com">Email</a></li><li><a href="tel:+19373054420">+1 (937) 305-4420</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><div>© 2026 SilverOak Residential Properties. <a href="privacy.html">Privacy</a> <a href="terms.html">Terms</a> <a href="rental-criteria.html">Rental Criteria</a> <a href="accessibility.html">Accessibility</a></div><div class="equal-housing">Equal Housing Opportunity</div></div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

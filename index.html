@@ -3,1492 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SilverOak Residential Properties — Find Your Place. Feel at Home. Luxury apartments, affordable rentals, short-term stays, and professional property management.">
+  <meta name="description" content="SilverOak Residential Properties — Find Your Place. Feel at Home. Quality residences, dependable service, and a simpler rental experience.">
   <title>SilverOak Residential Properties | Find Your Place. Feel at Home.</title>
-  
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --blue-900: #0a1628;
-      --blue-800: #0f2744;
-      --blue-700: #1a3a5c;
-      --blue-600: #1e4d7b;
-      --blue-500: #2563a8;
-      --blue-400: #3b82c4;
-      --blue-300: #60a5d8;
-      --blue-100: #dbeafe;
-      --blue-50: #eff6ff;
-      --white: #ffffff;
-      --off-white: #f8fafc;
-      --gray-100: #f1f5f9;
-      --gray-200: #e2e8f0;
-      --gray-300: #cbd5e1;
-      --gray-500: #64748b;
-      --gray-700: #334155;
-      --gray-900: #0f172a;
-      --gold: #c9a227;
-      --gold-light: #e8d48b;
-      --success: #10b981;
-      --shadow-sm: 0 1px 2px rgba(10, 22, 40, 0.05);
-      --shadow: 0 4px 12px rgba(10, 22, 40, 0.08);
-      --shadow-lg: 0 12px 40px rgba(10, 22, 40, 0.12);
-      --shadow-xl: 0 24px 60px rgba(10, 22, 40, 0.16);
-      --radius: 12px;
-      --radius-lg: 20px;
-      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--gray-900);
-      background: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4, .serif {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: var(--transition);
-    }
-
-    button, .btn {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      transition: var(--transition);
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
-    /* ========== NAVBAR ========== */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid transparent;
-      transition: var(--transition);
-    }
-
-    .navbar.scrolled {
-      border-bottom-color: var(--gray-200);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .logo img {
-      height: 48px;
-      width: auto;
-    }
-
-    .logo-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--blue-800);
-      letter-spacing: -0.02em;
-    }
-
-    .logo-text span {
-      display: block;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--blue-500);
-      margin-top: -2px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--gray-700);
-    }
-
-    .nav-links a:hover {
-      color: var(--blue-600);
-    }
-
-    .nav-cta {
-      background: var(--blue-700);
-      color: white !important;
-      padding: 0.6rem 1.25rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.875rem;
-    }
-
-    .nav-cta:hover {
-      background: var(--blue-600);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow);
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      padding: 8px;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--blue-800);
-      border-radius: 2px;
-      transition: var(--transition);
-    }
-
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    /* Mobile Menu */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 72px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: white;
-      padding: 2rem;
-      z-index: 999;
-      flex-direction: column;
-      gap: 1.5rem;
-      transform: translateX(100%);
-      transition: transform 0.35s ease;
-    }
-
-    .mobile-menu.open {
-      transform: translateX(0);
-    }
-
-    .mobile-menu a {
-      font-size: 1.125rem;
-      font-weight: 500;
-      color: var(--gray-800);
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--gray-100);
-    }
-
-    /* ========== HERO ========== */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 72px;
-      background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-700) 50%, var(--blue-600) 100%);
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: 
-        radial-gradient(ellipse at 20% 50%, rgba(59, 130, 196, 0.25) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(201, 162, 39, 0.1) 0%, transparent 40%);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-      padding: 4rem 0;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: var(--blue-100);
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 0.4rem 1rem;
-      border-radius: 100px;
-      margin-bottom: 1.5rem;
-      backdrop-filter: blur(8px);
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 3.75rem);
-      color: white;
-      margin-bottom: 1.25rem;
-      letter-spacing: -0.02em;
-    }
-
-    .hero h1 span {
-      color: var(--gold-light);
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 2rem;
-      max-width: 520px;
-      font-weight: 300;
-    }
-
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 3rem;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: white;
-      color: var(--blue-800);
-      padding: 0.9rem 1.75rem;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: transparent;
-      color: white;
-      padding: 0.9rem 1.75rem;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 1rem;
-      border: 1.5px solid rgba(255,255,255,0.4);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: white;
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-    }
-
-    .hero-stat strong {
-      display: block;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: white;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .hero-stat span {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.65);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    /* Decorative elements */
-    .hero-deco {
-      position: absolute;
-      right: -5%;
-      bottom: 0;
-      width: 55%;
-      max-width: 700px;
-      opacity: 0.15;
-      pointer-events: none;
-    }
-
-    /* ========== SECTIONS COMMON ========== */
-    section {
-      padding: 5rem 0;
-    }
-
-    .section-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--blue-500);
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-size: clamp(1.85rem, 4vw, 2.5rem);
-      color: var(--blue-900);
-      margin-bottom: 1rem;
-    }
-
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--gray-500);
-      max-width: 560px;
-      margin-bottom: 3rem;
-    }
-
-    .text-center {
-      text-align: center;
-    }
-
-    .text-center .section-subtitle {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* ========== ABOUT ========== */
-    .about {
-      background: var(--off-white);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .about-image {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-    }
-
-    .about-content .section-title {
-      margin-bottom: 1.25rem;
-    }
-
-    .about-content p {
-      color: var(--gray-700);
-      margin-bottom: 1.25rem;
-      font-size: 1.05rem;
-    }
-
-    .about-features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .about-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-
-    .about-feature .icon {
-      width: 40px;
-      height: 40px;
-      background: var(--blue-50);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 1.1rem;
-    }
-
-    .about-feature strong {
-      display: block;
-      font-size: 0.9rem;
-      color: var(--blue-900);
-      margin-bottom: 0.15rem;
-    }
-
-    .about-feature span {
-      font-size: 0.8rem;
-      color: var(--gray-500);
-    }
-
-    /* ========== WHY CHOOSE ========== */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    .why-card {
-      background: white;
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      transition: var(--transition);
-    }
-
-    .why-card:hover {
-      border-color: var(--blue-300);
-      box-shadow: var(--shadow);
-      transform: translateY(-4px);
-    }
-
-    .why-card .icon {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .why-card h3 {
-      font-size: 1.15rem;
-      color: var(--blue-900);
-      margin-bottom: 0.5rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-    }
-
-    .why-card p {
-      font-size: 0.925rem;
-      color: var(--gray-500);
-      line-height: 1.55;
-    }
-
-    /* ========== JOURNEY ========== */
-    .journey {
-      background: var(--blue-900);
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .journey .section-label {
-      color: var(--blue-300);
-    }
-
-    .journey .section-title {
-      color: white;
-    }
-
-    .journey .section-subtitle {
-      color: rgba(255,255,255,0.65);
-    }
-
-    .journey-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      counter-reset: step;
-    }
-
-    .journey-step {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      position: relative;
-      transition: var(--transition);
-    }
-
-    .journey-step:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.2);
-    }
-
-    .journey-step .num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 0.75rem;
-      opacity: 0.9;
-    }
-
-    .journey-step h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.4rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-    }
-
-    .journey-step p {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.5;
-    }
-
-    /* ========== PACKAGES ========== */
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      align-items: stretch;
-    }
-
-    .package-card {
-      background: white;
-      border: 1.5px solid var(--gray-200);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      transition: var(--transition);
-    }
-
-    .package-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .package-card.popular {
-      border-color: var(--blue-500);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .package-card.popular::before {
-      content: 'MOST POPULAR';
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--blue-600);
-      color: white;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      padding: 0.3rem 1rem;
-      border-radius: 100px;
-    }
-
-    .package-name {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--blue-900);
-      margin-bottom: 0.25rem;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .package-price {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: var(--blue-800);
-      margin-bottom: 0.25rem;
-    }
-
-    .package-price span {
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: var(--gray-500);
-      font-family: 'Inter', sans-serif;
-    }
-
-    .package-desc {
-      font-size: 0.9rem;
-      color: var(--gray-500);
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .package-features {
-      list-style: none;
-      flex: 1;
-      margin-bottom: 1.75rem;
-    }
-
-    .package-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      font-size: 0.9rem;
-      color: var(--gray-700);
-      margin-bottom: 0.75rem;
-    }
-
-    .package-features li::before {
-      content: '✓';
-      color: var(--success);
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .package-btn {
-      display: block;
-      text-align: center;
-      padding: 0.85rem;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      background: var(--blue-50);
-      color: var(--blue-700);
-    }
-
-    .package-card.popular .package-btn {
-      background: var(--blue-700);
-      color: white;
-    }
-
-    .package-btn:hover {
-      background: var(--blue-600);
-      color: white;
-    }
-
-    /* ========== GALLERY ========== */
-    .gallery {
-      background: var(--off-white);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-    }
-
-    .gallery-item {
-      border-radius: var(--radius);
-      overflow: hidden;
-      aspect-ratio: 4/3;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .gallery-item:nth-child(1),
-    .gallery-item:nth-child(6) {
-      grid-column: span 2;
-      aspect-ratio: 16/10;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .gallery-item::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(10,22,40,0.4), transparent 50%);
-      opacity: 0;
-      transition: var(--transition);
-    }
-
-    .gallery-item:hover::after {
-      opacity: 1;
-    }
-
-    /* ========== AMENITIES ========== */
-    .amenities-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-
-    .amenity-group h3 {
-      font-size: 1.25rem;
-      color: var(--blue-900);
-      margin-bottom: 1.25rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .amenity-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
-
-    .amenity-list li {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.95rem;
-      color: var(--gray-700);
-    }
-
-    .amenity-list li::before {
-      content: '✓';
-      width: 22px;
-      height: 22px;
-      background: var(--blue-50);
-      color: var(--blue-600);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .amenity-note {
-      font-size: 0.8rem;
-      color: var(--gray-500);
-      margin-top: 1.25rem;
-      font-style: italic;
-    }
-
-    /* ========== STATS + TESTIMONIALS ========== */
-    .social-proof {
-      background: linear-gradient(180deg, var(--blue-900) 0%, var(--blue-800) 100%);
-      color: white;
-    }
-
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-bottom: 4rem;
-      text-align: center;
-    }
-
-    .stat-item strong {
-      display: block;
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      margin-bottom: 0.25rem;
-    }
-
-    .stat-item span {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.65);
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    .testimonial {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-    }
-
-    .testimonial .stars {
-      color: var(--gold);
-      font-size: 0.9rem;
-      margin-bottom: 0.75rem;
-      letter-spacing: 2px;
-    }
-
-    .testimonial p {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.85);
-      margin-bottom: 1rem;
-      line-height: 1.6;
-      font-style: italic;
-    }
-
-    .testimonial cite {
-      font-style: normal;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--blue-300);
-    }
-
-    /* ========== URGENCY / CTA BAND ========== */
-    .urgency {
-      background: var(--off-white);
-      padding: 3rem 0;
-    }
-
-    .urgency-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-
-    .urgency-card {
-      background: white;
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .urgency-card .icon {
-      font-size: 1.75rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .urgency-card h3 {
-      font-size: 1.05rem;
-      color: var(--blue-900);
-      margin-bottom: 0.4rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-    }
-
-    .urgency-card p {
-      font-size: 0.875rem;
-      color: var(--gray-500);
-      margin-bottom: 1rem;
-    }
-
-    .urgency-card .btn-sm {
-      display: inline-block;
-      background: var(--blue-700);
-      color: white;
-      padding: 0.55rem 1.25rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .urgency-card .btn-sm:hover {
-      background: var(--blue-600);
-    }
-
-    /* ========== BOOKING FORM ========== */
-    .booking {
-      background: white;
-    }
-
-    .booking-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .booking-info h2 {
-      margin-bottom: 1rem;
-    }
-
-    .booking-info p {
-      color: var(--gray-500);
-      margin-bottom: 2rem;
-    }
-
-    .contact-methods {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .contact-method {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
-      background: var(--off-white);
-      border-radius: var(--radius);
-    }
-
-    .contact-method .icon {
-      width: 44px;
-      height: 44px;
-      background: var(--blue-50);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .contact-method strong {
-      display: block;
-      font-size: 0.9rem;
-      color: var(--blue-900);
-    }
-
-    .contact-method span {
-      font-size: 0.85rem;
-      color: var(--gray-500);
-    }
-
-    .booking-form {
-      background: var(--off-white);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      border: 1px solid var(--gray-200);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .form-group {
-      margin-bottom: 1rem;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--gray-700);
-      margin-bottom: 0.4rem;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1.5px solid var(--gray-200);
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-family: inherit;
-      background: white;
-      transition: var(--transition);
-      color: var(--gray-900);
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--blue-400);
-      box-shadow: 0 0 0 3px rgba(37, 99, 168, 0.12);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
-    .radio-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .radio-group label {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.9rem;
-      font-weight: 400;
-      cursor: pointer;
-    }
-
-    .checkbox-group {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      margin: 1.25rem 0;
-    }
-
-    .checkbox-group input {
-      margin-top: 3px;
-      width: 16px;
-      height: 16px;
-      accent-color: var(--blue-600);
-    }
-
-    .checkbox-group label {
-      font-size: 0.85rem;
-      color: var(--gray-500);
-      font-weight: 400;
-    }
-
-    .form-submit {
-      width: 100%;
-      background: var(--blue-700);
-      color: white;
-      padding: 1rem;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .form-submit:hover {
-      background: var(--blue-600);
-    }
-
-    .form-note {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--gray-500);
-      margin-top: 1rem;
-    }
-
-    /* ========== FAQ ========== */
-    .faq {
-      background: var(--off-white);
-    }
-
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      background: white;
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius);
-      margin-bottom: 0.75rem;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.25rem 1.5rem;
-      background: none;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--blue-900);
-      text-align: left;
-    }
-
-    .faq-question:hover {
-      background: var(--blue-50);
-    }
-
-    .faq-question .arrow {
-      font-size: 1.25rem;
-      transition: transform 0.3s ease;
-      color: var(--blue-500);
-    }
-
-    .faq-item.open .faq-question .arrow {
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-    }
-
-    .faq-item.open .faq-answer {
-      max-height: 300px;
-    }
-
-    .faq-answer-inner {
-      padding: 0 1.5rem 1.25rem;
-      font-size: 0.95rem;
-      color: var(--gray-500);
-      line-height: 1.6;
-    }
-
-    /* ========== FINAL CTA ========== */
-    .final-cta {
-      background: linear-gradient(135deg, var(--blue-800), var(--blue-600));
-      text-align: center;
-      color: white;
-      padding: 5rem 0;
-    }
-
-    .final-cta h2 {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      margin-bottom: 1rem;
-      color: white;
-    }
-
-    .final-cta p {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.8);
-      max-width: 560px;
-      margin: 0 auto 2rem;
-    }
-
-    .final-cta .btn-primary {
-      background: white;
-      color: var(--blue-800);
-    }
-
-    /* ========== FOOTER ========== */
-    footer {
-      background: var(--blue-900);
-      color: rgba(255,255,255,0.7);
-      padding: 4rem 0 2rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 2.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .footer-brand .logo-text {
-      color: white;
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-brand .logo-text span {
-      color: var(--blue-300);
-    }
-
-    .footer-brand p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-    }
-
-    .footer-col h4 {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 1.25rem;
-    }
-
-    .footer-col ul {
-      list-style: none;
-    }
-
-    .footer-col li {
-      margin-bottom: 0.6rem;
-    }
-
-    .footer-col a {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.65);
-    }
-
-    .footer-col a:hover {
-      color: white;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.8rem;
-    }
-
-    .footer-bottom a {
-      color: rgba(255,255,255,0.5);
-      margin-left: 1rem;
-    }
-
-    .footer-bottom a:hover {
-      color: white;
-    }
-
-    .equal-housing {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-    }
-
-    /* ========== ANIMATIONS ========== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 1024px) {
-      .about-grid,
-      .booking-grid,
-      .amenities-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .packages-grid {
-        grid-template-columns: 1fr;
-        max-width: 420px;
-        margin: 0 auto;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-item:nth-child(1),
-      .gallery-item:nth-child(6) {
-        grid-column: span 1;
-        aspect-ratio: 4/3;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .stats-row {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .urgency-cards {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .mobile-menu {
-        display: flex;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 6rem 0 4rem;
-      }
-
-      .hero-stats {
-        gap: 1.5rem;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .amenity-list {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      section {
-        padding: 3.5rem 0;
-      }
-    }
-
-    /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(10, 22, 40, 0.92);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-
-    .lightbox.open {
-      display: flex;
-    }
-
-    .lightbox img {
-      max-width: 90vw;
-      max-height: 85vh;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      background: rgba(255,255,255,0.15);
-      color: white;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .lightbox-close:hover {
-      background: rgba(255,255,255,0.25);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#home" class="logo">
+      <a href="index.html" class="logo">
         <img src="logo.png" alt="SilverOak Residential Properties" width="48" height="48">
-        <div class="logo-text">
-          SilverOak
-          <span>Residential Properties</span>
-        </div>
+        <div class="logo-text">SilverOak<span>Residential Properties</span></div>
       </a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="#packages">Packages</a></li>
-        <li><a href="#gallery">Apartments</a></li>
-        <li><a href="#faq">FAQs</a></li>
-        <li><a href="#booking" class="nav-cta">Schedule a Tour</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="homes.html">Homes</a></li>
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="residents.html">Residents</a></li>
+        <li><a href="referrals.html">Referrals</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="contact.html" class="nav-cta">Schedule a Tour</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
-
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="closeMobile()">About</a>
-    <a href="#why" onclick="closeMobile()">Why Us</a>
-    <a href="#packages" onclick="closeMobile()">Packages</a>
-    <a href="#gallery" onclick="closeMobile()">Apartments</a>
-    <a href="#faq" onclick="closeMobile()">FAQs</a>
-    <a href="#booking" class="nav-cta" style="text-align:center;margin-top:1rem" onclick="closeMobile()">Schedule a Tour</a>
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="about.html" onclick="closeMobile()">About &amp; Team</a>
+    <a href="homes.html" onclick="closeMobile()">Available Homes</a>
+    <a href="communities.html" onclick="closeMobile()">Communities</a>
+    <a href="residents.html" onclick="closeMobile()">Residents</a>
+    <a href="referrals.html" onclick="closeMobile()">Referrals</a>
+    <a href="testimonials.html" onclick="closeMobile()">Testimonials</a>
+    <a href="faq.html" onclick="closeMobile()">FAQs</a>
+    <a href="contact.html" class="nav-cta" onclick="closeMobile()">Schedule a Tour</a>
   </div>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+  <section class="hero photo" id="home">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">🏠 Luxury Living · Trusted Since 2017</div>
+        <div class="hero-badge">Luxury Living · Trusted Since 2017</div>
         <h1>Find a Place <span>Worth Calling Home</span></h1>
         <p>Elevated living, thoughtfully selected. Discover beautifully maintained apartments designed around comfort, convenience, and modern living.</p>
         <div class="hero-ctas">
-          <a href="#gallery" class="btn-primary">Explore Available Homes →</a>
-          <a href="#booking" class="btn-secondary">Schedule a Tour</a>
+          <a href="homes.html" class="btn-primary">Explore Available Homes →</a>
+          <a href="contact.html" class="btn-secondary">Schedule a Tour</a>
         </div>
         <div class="hero-stats">
-          <div class="hero-stat">
-            <strong>112+</strong>
-            <span>Properties Managed</span>
-          </div>
-          <div class="hero-stat">
-            <strong>85</strong>
-            <span>Homes Leased</span>
-          </div>
-          <div class="hero-stat">
-            <strong>8+</strong>
-            <span>Years Serving Residents</span>
-          </div>
+          <div class="hero-stat"><strong>112+</strong><span>Properties Managed</span></div>
+          <div class="hero-stat"><strong>85</strong><span>Homes Leased</span></div>
+          <div class="hero-stat"><strong>8+</strong><span>Years Serving Residents</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
+  <section>
     <div class="container">
       <div class="about-grid">
         <div class="about-image reveal">
-          <img src="gallery12.jpg" alt="SilverOak Residence Exterior" loading="lazy">
+          <img src="gallery12.jpg" alt="SilverOak residence exterior">
         </div>
         <div class="about-content reveal">
           <span class="section-label">Our Vision</span>
@@ -1496,599 +73,228 @@
           <p>At SilverOak Residential Properties, our vision is to make finding a home simple, comfortable, and rewarding. We are committed to offering quality residences, dependable service, and thoughtfully selected properties where people can feel truly at home.</p>
           <p>From affordable rentals and short-term stays to fully furnished apartments, student housing, and co-living options — we help high-net-worth individuals, expats, young professionals, students, families, and corporate clients find their place.</p>
           <div class="about-features">
-            <div class="about-feature">
-              <div class="icon">🏡</div>
-              <div>
-                <strong>Quality Residences</strong>
-                <span>Carefully selected homes</span>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="icon">✨</div>
-              <div>
-                <strong>Elevated Living</strong>
-                <span>Refined comfort & style</span>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="icon">🤝</div>
-              <div>
-                <strong>Personalized Service</strong>
-                <span>Matched to your lifestyle</span>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="icon">🔑</div>
-              <div>
-                <strong>Simple Experience</strong>
-                <span>Clear process, start to finish</span>
-              </div>
-            </div>
+            <div class="about-feature"><div class="icon">🏡</div><div><strong>Quality Residences</strong><span>Carefully selected homes</span></div></div>
+            <div class="about-feature"><div class="icon">✨</div><div><strong>Elevated Living</strong><span>Refined comfort &amp; style</span></div></div>
+            <div class="about-feature"><div class="icon">🤝</div><div><strong>Personalized Service</strong><span>Matched to your lifestyle</span></div></div>
+            <div class="about-feature"><div class="icon">🔑</div><div><strong>Simple Experience</strong><span>Clear process, start to finish</span></div></div>
           </div>
+          <p style="margin-top:1.4rem"><a href="about.html" class="btn-navy">Meet Our Team →</a></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE US -->
+  <section class="band-photo band-meet">
+    <div class="container reveal">
+      <span class="section-label" style="color:var(--gold-light)">Dynamic · Dependable · Genuine</span>
+      <h2>Trusting your home search to SilverOak</h2>
+      <p>Each member of our team is dedicated to guiding residents toward their specific goals — strategically, carefully, and with a personal touch that lasts beyond move-in day.</p>
+      <a href="about.html" class="btn-primary">Meet the SilverOak Crew</a>
+    </div>
+  </section>
+
   <section id="why">
     <div class="container">
       <div class="text-center reveal">
         <span class="section-label">Why SilverOak</span>
-        <h2 class="section-title">Why Choose SilverOak Residential Properties?</h2>
-        <p class="section-subtitle">Discover why residents choose us for comfortable homes, attentive service, and a smoother rental experience.</p>
+        <h2 class="section-title">Why residents choose us</h2>
+        <p class="section-subtitle">Comfortable homes, attentive service, and a smoother rental experience from first inquiry to keys in hand.</p>
       </div>
       <div class="why-grid">
-        <div class="why-card reveal">
-          <div class="icon">🏠</div>
-          <h3>Carefully Selected Homes</h3>
-          <p>Quality apartments chosen with comfort, location, and lifestyle in mind.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="icon">✨</div>
-          <h3>Elevated Living</h3>
-          <p>Well-maintained residences designed to provide a comfortable and refined living experience.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="icon">🤝</div>
-          <h3>Personalized Service</h3>
-          <p>We listen to what you need and help you find a home that fits your lifestyle and budget.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="icon">📋</div>
-          <h3>Simple Rental Experience</h3>
-          <p>From your first inquiry to move-in day, we make the rental process clear, smooth, and straightforward.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="icon">🔧</div>
-          <h3>Reliable Property Care</h3>
-          <p>We take pride in keeping our properties maintained and addressing residents’ needs promptly.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="icon">💙</div>
-          <h3>A Home, Not Just an Address</h3>
-          <p>Our goal is to create long-term relationships with residents by delivering dependable service and homes they’re proud to call their own.</p>
-        </div>
+        <div class="why-card reveal"><div class="icon">🏠</div><h3>Carefully Selected Homes</h3><p>Quality apartments chosen with comfort, location, and lifestyle in mind.</p></div>
+        <div class="why-card reveal"><div class="icon">✨</div><h3>Elevated Living</h3><p>Well-maintained residences designed for a comfortable, refined living experience.</p></div>
+        <div class="why-card reveal"><div class="icon">🤝</div><h3>Personalized Service</h3><p>We listen to what you need and help you find a home that fits your lifestyle and budget.</p></div>
+        <div class="why-card reveal"><div class="icon">📋</div><h3>Simple Rental Experience</h3><p>From your first inquiry to move-in day, the process stays clear and straightforward.</p></div>
+        <div class="why-card reveal"><div class="icon">🔧</div><h3>Reliable Property Care</h3><p>We keep properties maintained and address residents’ needs promptly.</p></div>
+        <div class="why-card reveal"><div class="icon">💙</div><h3>A Home, Not Just an Address</h3><p>Long-term relationships built on dependable service and homes people are proud to call their own.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- JOURNEY -->
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Featured Residences</span>
+        <h2 class="section-title">Homes available to tour</h2>
+        <p class="section-subtitle">Representative SilverOak residences. Pricing is illustrative — contact leasing for current availability and rates.</p>
+      </div>
+      <div class="homes-grid">
+        <article class="home-card reveal">
+          <div class="photo">
+            <img src="gallery5.jpg" alt="The Oak House kitchen">
+            <span class="home-badge">Just listed</span>
+            <span class="home-price">$1,650/mo</span>
+          </div>
+          <div class="home-body">
+            <h3>The Oak House — Signature</h3>
+            <p class="home-meta">Premium finishes · Flexible move-in</p>
+            <div class="home-specs"><span>2 Bed</span><span>2 Bath</span><span>Kitchen</span></div>
+            <a href="contact.html" class="btn-sm">Schedule a tour →</a>
+          </div>
+        </article>
+        <article class="home-card reveal">
+          <div class="photo">
+            <img src="gallery2.jpg" alt="Riverside living room">
+            <span class="home-badge">Leasing now</span>
+            <span class="home-price">$1,200/mo</span>
+          </div>
+          <div class="home-body">
+            <h3>Riverside Residence — Essential</h3>
+            <p class="home-meta">Comfortable living · Resident portal</p>
+            <div class="home-specs"><span>1 Bed</span><span>1 Bath</span><span>Laundry</span></div>
+            <a href="contact.html" class="btn-sm">Schedule a tour →</a>
+          </div>
+        </article>
+        <article class="home-card reveal">
+          <div class="photo">
+            <img src="gallery9.jpg" alt="Premier living room with fireplace">
+            <span class="home-badge">Premier</span>
+            <span class="home-price">$2,200/mo</span>
+          </div>
+          <div class="home-body">
+            <h3>Hearth Collection — Premier</h3>
+            <p class="home-meta">Expanded living · Priority support</p>
+            <div class="home-specs"><span>3 Bed</span><span>2 Bath</span><span>Fireplace</span></div>
+            <a href="contact.html" class="btn-sm">Schedule a tour →</a>
+          </div>
+        </article>
+      </div>
+      <p class="text-center" style="margin-top:2rem"><a href="homes.html" class="btn-navy">View all residences →</a></p>
+    </div>
+  </section>
+
   <section class="journey" id="journey">
     <div class="container">
       <div class="text-center reveal">
         <span class="section-label">Our Journey Home</span>
-        <h2 class="section-title">How It Works</h2>
-        <p class="section-subtitle">From discovery to move-in — a clear, simple path to your new home.</p>
+        <h2 class="section-title">How it works</h2>
+        <p class="section-subtitle">From discovery to move-in — a clear path to your new home.</p>
       </div>
       <div class="journey-steps">
-        <div class="journey-step reveal">
-          <div class="num">01</div>
-          <h3>Discover</h3>
-          <p>Explore our carefully selected apartments and find properties that match your lifestyle, location, and budget.</p>
-        </div>
-        <div class="journey-step reveal">
-          <div class="num">02</div>
-          <h3>Explore</h3>
-          <p>View photos, amenities, floor plans, pricing, and property details from the comfort of home.</p>
-        </div>
-        <div class="journey-step reveal">
-          <div class="num">03</div>
-          <h3>Connect</h3>
-          <p>Tell us what you're looking for. Our team is here to answer questions and help you choose with confidence.</p>
-        </div>
-        <div class="journey-step reveal">
-          <div class="num">04</div>
-          <h3>Apply</h3>
-          <p>Complete a simple, straightforward rental application and provide the required information securely.</p>
-        </div>
-        <div class="journey-step reveal">
-          <div class="num">05</div>
-          <h3>Get Approved</h3>
-          <p>Once your application is reviewed and approved, we'll guide you through the next steps.</p>
-        </div>
-        <div class="journey-step reveal">
-          <div class="num">06</div>
-          <h3>Make It Yours</h3>
-          <p>Finalize your lease, select any available options, and prepare your new space for move-in.</p>
-        </div>
-        <div class="journey-step reveal">
-          <div class="num">07</div>
-          <h3>Move In</h3>
-          <p>Receive your keys and step into a place you're proud to call home.</p>
-        </div>
+        <div class="journey-step reveal"><div class="num">01</div><h3>Discover</h3><p>Explore carefully selected apartments that match lifestyle, location, and budget.</p></div>
+        <div class="journey-step reveal"><div class="num">02</div><h3>Explore</h3><p>View photos, amenities, pricing, and property details from home.</p></div>
+        <div class="journey-step reveal"><div class="num">03</div><h3>Connect</h3><p>Tell us what you need. Our team answers questions and helps you choose.</p></div>
+        <div class="journey-step reveal"><div class="num">04</div><h3>Apply</h3><p>Complete a straightforward rental application and submit required information securely.</p></div>
+        <div class="journey-step reveal"><div class="num">05</div><h3>Get Approved</h3><p>Once reviewed and approved, we guide you through the next steps.</p></div>
+        <div class="journey-step reveal"><div class="num">06</div><h3>Make It Yours</h3><p>Finalize your lease, select options, and prepare your space.</p></div>
+        <div class="journey-step reveal"><div class="num">07</div><h3>Move In</h3><p>Receive your keys and step into a place you’re proud to call home.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- PACKAGES -->
-  <section id="packages">
-    <div class="container">
-      <div class="text-center reveal">
-        <span class="section-label">Find the Right Fit</span>
-        <h2 class="section-title">Packages & Pricing</h2>
-        <p class="section-subtitle">Choose the level of comfort and service that matches your lifestyle. Pricing is illustrative — contact us for current rates.</p>
-      </div>
-      <div class="packages-grid">
-        <div class="package-card reveal">
-          <div class="package-name">SilverOak Essential</div>
-          <div class="package-price">$1,200<span>/mo</span></div>
-          <p class="package-desc">A comfortable, practical home with the essentials you need.</p>
-          <ul class="package-features">
-            <li>Quality apartment residence</li>
-            <li>Standard maintenance support</li>
-            <li>Resident portal access</li>
-            <li>Secure application process</li>
-            <li>Convenient move-in assistance</li>
-          </ul>
-          <a href="#booking" class="package-btn">Learn More</a>
-        </div>
-        <div class="package-card popular reveal">
-          <div class="package-name">SilverOak Signature</div>
-          <div class="package-price">$1,650<span>/mo</span></div>
-          <p class="package-desc">Our most popular option — comfort, convenience, and elevated living.</p>
-          <ul class="package-features">
-            <li>Everything in Essential</li>
-            <li>Premium apartment finishes</li>
-            <li>Enhanced property amenities</li>
-            <li>Priority maintenance support</li>
-            <li>Dedicated resident assistance</li>
-            <li>Flexible move-in options</li>
-          </ul>
-          <a href="#booking" class="package-btn">Choose Signature</a>
-        </div>
-        <div class="package-card reveal">
-          <div class="package-name">SilverOak Premier</div>
-          <div class="package-price">$2,200<span>/mo</span></div>
-          <p class="package-desc">A refined experience for those seeking extra space, style, and personalized service.</p>
-          <ul class="package-features">
-            <li>Everything in Signature</li>
-            <li>Premium/luxury residence options</li>
-            <li>Expanded living spaces</li>
-            <li>Enhanced amenities</li>
-            <li>Priority resident support</li>
-            <li>Personalized move-in assistance</li>
-            <li>Select premium property benefits</li>
-          </ul>
-          <a href="#booking" class="package-btn">Choose Premier</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="gallery" id="gallery">
-    <div class="container">
-      <div class="text-center reveal">
-        <span class="section-label">Explore Our Apartments</span>
-        <h2 class="section-title">Gallery</h2>
-        <p class="section-subtitle">Take a look inside our carefully maintained residences — modern kitchens, spacious living areas, and refined finishes.</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery1.jpg" alt="Hallway with hardwood floors" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery2.jpg" alt="Spacious living room" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery3.jpg" alt="Bright living area" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery4.jpg" alt="Laundry and storage" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery5.jpg" alt="Modern kitchen" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery6.jpg" alt="Empty living space" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery7.jpg" alt="Elegant dining area" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery8.jpg" alt="Kitchen and storage" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery9.jpg" alt="Living room with fireplace" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery10.jpg" alt="Backyard and outdoor space" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery11.jpg" alt="Dining nook" loading="lazy">
-        </div>
-        <div class="gallery-item reveal" onclick="openLightbox(this)">
-          <img src="gallery13.jpg" alt="Luxury bathroom" loading="lazy">
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:2.5rem" class="reveal">
-        <a href="#booking" class="btn-primary" style="background:var(--blue-700);color:white">Schedule a Private Tour →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- AMENITIES -->
-  <section id="amenities">
-    <div class="container">
-      <div class="text-center reveal">
-        <span class="section-label">Comfortable Living</span>
-        <h2 class="section-title">Amenities Designed for You</h2>
-        <p class="section-subtitle">Our residences are selected and maintained with the features residents value most.</p>
-      </div>
-      <div class="amenities-grid">
-        <div class="amenity-group reveal">
-          <h3>🏠 Home Features</h3>
-          <ul class="amenity-list">
-            <li>Modern kitchens</li>
-            <li>Updated bathrooms</li>
-            <li>Spacious living areas</li>
-            <li>Ample storage</li>
-            <li>Comfortable bedrooms</li>
-            <li>Quality finishes</li>
-            <li>Natural light</li>
-            <li>In-unit or on-site laundry*</li>
-          </ul>
-        </div>
-        <div class="amenity-group reveal">
-          <h3>🌳 Community Amenities</h3>
-          <ul class="amenity-list">
-            <li>Parking options*</li>
-            <li>Secure entry*</li>
-            <li>Outdoor spaces*</li>
-            <li>Fitness facilities*</li>
-            <li>Resident areas*</li>
-            <li>Convenient locations</li>
-          </ul>
-          <p class="amenity-note">*Amenities vary by property. See individual property listings for specific features.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL PROOF -->
   <section class="social-proof" id="testimonials">
     <div class="container">
       <div class="stats-row reveal">
-        <div class="stat-item">
-          <strong>112+</strong>
-          <span>Properties Managed</span>
-        </div>
-        <div class="stat-item">
-          <strong>8+</strong>
-          <span>Years Serving Residents</span>
-        </div>
-        <div class="stat-item">
-          <strong>85</strong>
-          <span>Homes Successfully Leased</span>
-        </div>
+        <div class="stat-item"><strong>112+</strong><span>Properties Managed</span></div>
+        <div class="stat-item"><strong>8+</strong><span>Years Serving Residents</span></div>
+        <div class="stat-item"><strong>85</strong><span>Homes Successfully Leased</span></div>
       </div>
       <div class="text-center reveal" style="margin-bottom:2.5rem">
-        <span class="section-label">What Our Residents Say</span>
-        <h2 class="section-title" style="color:white">Trusted by Residents. Chosen with Confidence.</h2>
+        <span class="section-label" style="color:var(--gold-light)">What Our Residents Say</span>
+        <h2 class="section-title" style="color:white">Trusted by residents. Chosen with confidence.</h2>
       </div>
       <div class="testimonials-grid">
-        <div class="testimonial reveal">
-          <div class="stars">★★★★★</div>
-          <p>“From viewing the apartment to getting the keys, the entire process was clear and straightforward. SilverOak made finding our new home so much easier.”</p>
-          <cite>— Jordan M.</cite>
-        </div>
-        <div class="testimonial reveal">
-          <div class="stars">★★★★★</div>
-          <p>“We love our apartment and the level of care that goes into maintaining the property. The team has always been professional and responsive.”</p>
-          <cite>— Ashley R.</cite>
-        </div>
-        <div class="testimonial reveal">
-          <div class="stars">★★★★★</div>
-          <p>“SilverOak made the rental process feel simple. Communication was excellent, and we felt supported throughout the entire experience.”</p>
-          <cite>— Michael T.</cite>
-        </div>
-        <div class="testimonial reveal">
-          <div class="stars">★★★★★</div>
-          <p>“The property matched what we were looking for in terms of comfort, location, and value. We couldn’t be happier with our new home.”</p>
-          <cite>— Taylor & Chris</cite>
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“From viewing the apartment to getting the keys, the entire process was clear and straightforward. SilverOak made finding our new home so much easier.”</p><cite>— Jordan M.</cite></div>
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“We love our apartment and the level of care that goes into maintaining the property. The team has always been professional and responsive.”</p><cite>— Ashley R.</cite></div>
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“SilverOak made the rental process feel simple. Communication was excellent, and we felt supported throughout the entire experience.”</p><cite>— Michael T.</cite></div>
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“The property matched what we were looking for in terms of comfort, location, and value. We couldn’t be happier with our new home.”</p><cite>— Taylor &amp; Chris</cite></div>
+      </div>
+      <p class="text-center" style="margin-top:1.8rem"><a href="testimonials.html" class="btn-secondary">View all testimonials</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="success-grid">
+        <img class="reveal" src="sold-sign.jpg" alt="Residents celebrating a newly secured SilverOak home">
+        <div class="reveal">
+          <span class="section-label">Homes placed</span>
+          <h2 class="section-title">85 households have already found their place.</h2>
+          <p style="color:var(--gray-600);margin-bottom:0.85rem">When the right residence is reserved and keys are ready, that is the moment that matters. We treat every lease like a placement — clear terms, a prepared home, and a team that stays after move-in.</p>
+          <p style="color:var(--gray-600);margin-bottom:1.2rem">Whether you are touring for yourself or referring someone you care about, we will walk the property with you and close the loop.</p>
+          <a href="homes.html" class="btn-navy">See available homes</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- URGENCY -->
+  <section>
+    <div class="container">
+      <div class="media-split">
+        <div class="reveal">
+          <span class="section-label">On site</span>
+          <h2 class="section-title">Walk the residence before you decide.</h2>
+          <p style="color:var(--gray-600);margin-bottom:1.2rem">In-person and virtual tours are scheduled around your day. Bring questions. We will walk kitchens, outdoor space, and the details that do not show in a gallery.</p>
+          <a href="contact.html" class="btn-navy">Schedule a tour</a>
+        </div>
+        <img class="reveal" src="property-walkthrough.jpg" alt="Touring a SilverOak residence">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Leadership</span>
+        <h2 class="section-title">Meet part of the crew</h2>
+      </div>
+      <div class="team-grid" style="grid-template-columns:repeat(3,1fr)">
+        <article class="team-card reveal"><div class="team-photo"><img src="team-guy-bond.jpg" alt="Guy Bond"></div><div class="team-body"><h3>Guy Bond</h3><div class="team-role">CEO</div></div></article>
+        <article class="team-card reveal"><div class="team-photo"><img src="team-ed-gal.jpg" alt="Ed Gal"></div><div class="team-body"><h3>Ed Gal</h3><div class="team-role">Chief Innovation Officer</div></div></article>
+        <article class="team-card reveal"><div class="team-photo"><img src="team-larry-saunders.jpg" alt="Larry Saunders"></div><div class="team-body"><h3>Larry Saunders</h3><div class="team-role">Chief Broker Officer</div></div></article>
+        <article class="team-card reveal"><div class="team-photo"><img src="team-elizabeth-tse.jpg" alt="Elizabeth Tse"></div><div class="team-body"><h3>Elizabeth Tse</h3><div class="team-role">COO</div></div></article>
+        <article class="team-card reveal"><div class="team-photo"><img src="team-cj-napolitano.jpg" alt="CJ Napolitano"></div><div class="team-body"><h3>CJ Napolitano</h3><div class="team-role">CFO</div></div></article>
+        <article class="team-card reveal"><div class="team-photo"><img src="team-jobe-steinberg.jpg" alt="Jobe N. Steinberg"></div><div class="team-body"><h3>Jobe N. Steinberg</h3><div class="team-role">Managing Broker, NY</div></div></article>
+      </div>
+      <p class="text-center" style="margin-top:1.5rem"><a href="about.html" class="btn-navy">Full team →</a></p>
+    </div>
+  </section>
+
   <section class="urgency">
     <div class="container">
       <div class="urgency-cards">
-        <div class="urgency-card reveal">
-          <div class="icon">🔥</div>
-          <h3>Limited Availability</h3>
-          <p>Our available residences can lease quickly. Explore current listings and secure your preferred home while availability lasts.</p>
-          <a href="#gallery" class="btn-sm">View Available Homes</a>
-        </div>
-        <div class="urgency-card reveal">
-          <div class="icon">🏠</div>
-          <h3>Homes Are Leasing Now</h3>
-          <p>If you’ve found a home you love, don’t wait too long to take the next step.</p>
-          <a href="#booking" class="btn-sm">Start Your Application</a>
-        </div>
-        <div class="urgency-card reveal">
-          <div class="icon">⚡</div>
-          <h3>Just Listed</h3>
-          <p>New SilverOak residences become available regularly. Stay ahead and schedule a tour today.</p>
-          <a href="#booking" class="btn-sm">Schedule a Tour</a>
-        </div>
+        <div class="urgency-card reveal"><div class="icon">🔥</div><h3>Limited Availability</h3><p>Residences can lease quickly. Explore current listings and secure your preferred home while availability lasts.</p><a href="homes.html" class="btn-sm">View available homes</a></div>
+        <div class="urgency-card reveal"><div class="icon">🏠</div><h3>Homes Are Leasing Now</h3><p>If you’ve found a home you love, don’t wait too long to take the next step.</p><a href="contact.html" class="btn-sm">Start your application</a></div>
+        <div class="urgency-card reveal"><div class="icon">⚡</div><h3>Refer a Renter</h3><p>Know someone looking for a quality home? Refer them and earn a rent credit when they sign.</p><a href="referrals.html" class="btn-sm">Submit a referral</a></div>
       </div>
     </div>
   </section>
 
-  <!-- BOOKING -->
-  <section class="booking" id="booking">
-    <div class="container">
-      <div class="booking-grid">
-        <div class="booking-info reveal">
-          <span class="section-label">Contact & Conversion</span>
-          <h2 class="section-title">Schedule a Property Tour</h2>
-          <p>Tell us what you're looking for, and a SilverOak Residential Properties representative will help you schedule a convenient viewing — in-person or virtual.</p>
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="icon">📧</div>
-              <div>
-                <strong>Email</strong>
-                <span>silveroakresidentialproperties@outlook.com</span>
-              </div>
-            </div>
-            <div class="contact-method">
-              <div class="icon">📞</div>
-              <div>
-                <strong>Phone / Text</strong>
-                <span>+1 (937) 305-4420</span>
-              </div>
-            </div>
-            <div class="contact-method">
-              <div class="icon">📋</div>
-              <div>
-                <strong>Leasing Inquiries</strong>
-                <span>leasingsilveroakresidentialproperties@outlook.com</span>
-              </div>
-            </div>
-            <div class="contact-method">
-              <div class="icon">🛠️</div>
-              <div>
-                <strong>Resident Support</strong>
-                <span>Supsilveroakresidential126@outlook.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="booking-form reveal">
-          <form id="tourForm" onsubmit="handleSubmit(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fullName">Full Name *</label>
-                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required placeholder="you@example.com">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000">
-              </div>
-              <div class="form-group">
-                <label for="property">Property Interested In</label>
-                <select id="property" name="property">
-                  <option value="">Select a property</option>
-                  <option value="essential">SilverOak Essential</option>
-                  <option value="signature">SilverOak Signature</option>
-                  <option value="premier">SilverOak Premier</option>
-                  <option value="other">Other / Not Sure</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="moveIn">Preferred Move-In Date</label>
-                <input type="date" id="moveIn" name="moveIn">
-              </div>
-              <div class="form-group">
-                <label>Number of Bedrooms</label>
-                <div class="radio-group">
-                  <label><input type="radio" name="bedrooms" value="studio"> Studio</label>
-                  <label><input type="radio" name="bedrooms" value="1"> 1 Bed</label>
-                  <label><input type="radio" name="bedrooms" value="2"> 2 Beds</label>
-                  <label><input type="radio" name="bedrooms" value="3+"> 3+</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="prefDate">Preferred Tour Date *</label>
-                <input type="date" id="prefDate" name="prefDate" required>
-              </div>
-              <div class="form-group">
-                <label for="prefTime">Preferred Time *</label>
-                <select id="prefTime" name="prefTime" required>
-                  <option value="">Select a time</option>
-                  <option value="morning">Morning (9am–12pm)</option>
-                  <option value="afternoon">Afternoon (12pm–4pm)</option>
-                  <option value="evening">Evening (4pm–7pm)</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Tour Preference</label>
-              <div class="radio-group">
-                <label><input type="radio" name="tourType" value="in-person" checked> In-Person</label>
-                <label><input type="radio" name="tourType" value="virtual"> Virtual</label>
-                <label><input type="radio" name="tourType" value="either"> Either</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Message / Questions</label>
-              <textarea id="message" name="message" placeholder="Tell us anything you'd like us to know..."></textarea>
-            </div>
-            <div class="checkbox-group">
-              <input type="checkbox" id="consent" name="consent" required>
-              <label for="consent">I agree to be contacted by SilverOak Residential Properties regarding my inquiry and available properties.</label>
-            </div>
-            <button type="submit" class="form-submit">Schedule My Tour</button>
-            <p class="form-note">We’ll review your request and contact you to confirm your appointment.</p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <div class="text-center reveal">
-        <span class="section-label">Help Center</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Quick answers to common questions about touring, applying, and living with SilverOak.</p>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            How do I schedule an apartment tour?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">You can schedule a tour through our online booking form above. Select your preferred property, date, and time, and our team will contact you to confirm.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            How do I apply for a property?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Select an available property and follow the application instructions provided by our leasing team after your tour or inquiry.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            What documents are required to apply?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Requirements may vary by property. Our leasing team will provide the current application requirements when you are ready to apply.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            How long does the application process take?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Processing times can vary depending on the property and whether all required information has been received. We strive to keep you informed every step of the way.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            Are utilities included in the rent?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Utility arrangements vary by property. Check the individual property listing or contact our leasing team for details.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            Are pets allowed?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Pet policies vary by residence. Contact us about the specific property you’re interested in.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            Can I schedule a virtual tour?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Yes, where available. Select “Virtual Tour” when submitting your tour request on the booking form.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            How can I contact SilverOak Residential Properties?
-            <span class="arrow">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">You can reach us by phone at +1 (937) 305-4420, email at silveroakresidentialproperties@outlook.com, or through our online contact and tour-booking forms.</div>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:2.5rem" class="reveal">
-        <p style="color:var(--gray-500);margin-bottom:1rem">Still have questions?</p>
-        <a href="#booking" class="btn-primary" style="background:var(--blue-700);color:white">Contact Us</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="container reveal">
-      <h2>Ready to Find Your Next Home?</h2>
-      <p>With 85 homes successfully leased, 112+ properties managed, and 8+ years serving our residents, SilverOak Residential Properties is committed to making your search for a home simple and comfortable.</p>
-      <p style="font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--gold-light);margin-bottom:2rem">Find Your Place. Feel at Home.</p>
-      <a href="#gallery" class="btn-primary">View Available Homes →</a>
+      <h2>Ready to find your next home?</h2>
+      <p>With 85 homes successfully leased, 112+ properties managed, and 8+ years serving residents, SilverOak is committed to making your search simple and comfortable.</p>
+      <p class="serif" style="font-size:1.35rem;color:var(--gold-light);margin-bottom:2rem">Find Your Place. Feel at Home.</p>
+      <a href="homes.html" class="btn-primary">View available homes →</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo-text" style="color:white;margin-bottom:0.75rem">
-            SilverOak
-            <span style="color:var(--blue-300)">Residential Properties</span>
-          </div>
+          <div class="logo-text" style="color:white;margin-bottom:0.75rem">SilverOak<span style="color:var(--blue-300)">Residential Properties</span></div>
           <p>Quality residences. Dependable service. A simpler rental experience.</p>
           <p style="font-size:0.85rem">Find Your Place. Feel at Home.</p>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#gallery">Available Apartments</a></li>
-            <li><a href="#booking">Schedule a Tour</a></li>
-            <li><a href="#journey">How It Works</a></li>
-            <li><a href="#amenities">Amenities</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#faq">FAQs</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="homes.html">Available Homes</a></li>
+            <li><a href="about.html">About &amp; Team</a></li>
+            <li><a href="communities.html">Communities</a></li>
+            <li><a href="referrals.html">Submit a Referral</a></li>
+            <li><a href="faq.html">FAQs</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Resident Resources</h4>
           <ul>
-            <li><a href="#">Resident Portal</a></li>
-            <li><a href="#">Maintenance Request</a></li>
-            <li><a href="#">Pay Rent</a></li>
-            <li><a href="#">Resident Support</a></li>
+            <li><a href="residents.html">Resident Portal</a></li>
+            <li><a href="residents.html#maintenance">Maintenance Request</a></li>
+            <li><a href="residents.html#pay">Pay Rent</a></li>
+            <li><a href="contact.html">Resident Support</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -2104,109 +310,15 @@
       <div class="footer-bottom">
         <div>
           © 2026 SilverOak Residential Properties. All Rights Reserved.
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Rental Criteria</a>
-          <a href="#">Accessibility</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="rental-criteria.html">Rental Criteria</a>
+          <a href="accessibility.html">Accessibility</a>
         </div>
-        <div class="equal-housing">
-          ⚖️ Equal Housing Opportunity
-        </div>
+        <div class="equal-housing">Equal Housing Opportunity</div>
       </div>
     </div>
   </footer>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" aria-label="Close">×</button>
-    <img id="lightboxImg" src="" alt="Apartment photo">
-  </div>
-
-  <script>
-    // Navbar scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    // Mobile menu
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('open');
-      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-    });
-    function closeMobile() {
-      hamburger.classList.remove('active');
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
-
-    // FAQ accordion
-    function toggleFaq(btn) {
-      const item = btn.parentElement;
-      const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!wasOpen) item.classList.add('open');
-    }
-
-    // Lightbox
-    function openLightbox(el) {
-      const img = el.querySelector('img');
-      document.getElementById('lightboxImg').src = img.src;
-      document.getElementById('lightbox').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeLightbox();
-    });
-
-    // Form submit (demo)
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      btn.textContent = 'Submitting...';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = 'Request Received ✓';
-        btn.style.background = 'var(--success)';
-        setTimeout(() => {
-          e.target.reset();
-          btn.textContent = 'Schedule My Tour';
-          btn.style.background = '';
-          btn.disabled = false;
-          alert('Thank you! Your tour request has been received. A SilverOak representative will contact you shortly to confirm.');
-        }, 1500);
-      }, 1000);
-    }
-
-    // Smooth offset for fixed nav
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

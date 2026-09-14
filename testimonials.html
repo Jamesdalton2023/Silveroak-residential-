@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials | SilverOak Residential Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo"><img src="logo.png" alt="SilverOak" width="48" height="48"><div class="logo-text">SilverOak<span>Residential Properties</span></div></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="homes.html">Homes</a></li>
+        <li><a href="contact.html" class="nav-cta">Schedule a Tour</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="contact.html" class="nav-cta" onclick="closeMobile()">Schedule a Tour</a>
+  </div>
+
+  <section class="page-hero photo-meet">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Social Proof</div>
+        <h1>What residents <span>say</span></h1>
+        <p>Trusted by residents. Chosen with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-proof" style="padding-top:4rem">
+    <div class="container">
+      <div class="testimonials-grid">
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“From viewing the apartment to getting the keys, the entire process was clear and straightforward. SilverOak made finding our new home so much easier.”</p><cite>— Jordan M.</cite></div>
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“We love our apartment and the level of care that goes into maintaining the property. The team has always been professional and responsive.”</p><cite>— Ashley R.</cite></div>
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“SilverOak made the rental process feel simple. Communication was excellent, and we felt supported throughout the entire experience.”</p><cite>— Michael T.</cite></div>
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“The property matched what we were looking for in terms of comfort, location, and value. We couldn’t be happier with our new home.”</p><cite>— Taylor &amp; Chris</cite></div>
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“I reached the team by phone and email easily. They kept me informed every step of the way and treated the search like it mattered.”</p><cite>— Derek C.</cite></div>
+        <div class="testimonial reveal"><div class="stars">★★★★★</div><p>“Clear advice, careful follow-through, and a home that felt right on the first walkthrough. I would recommend SilverOak without hesitation.”</p><cite>— Bertil C.</cite></div>
+      </div>
+      <p class="text-center" style="margin-top:2rem"><a href="contact.html" class="btn-primary">Start your tour</a></p>
+    </div>
+  </section>
+  <section class="band-photo band-celebrate">
+    <div class="container reveal">
+      <h2>The moment a home becomes yours</h2>
+      <p>Residents choose SilverOak when the process feels human and the residence feels right.</p>
+      <a href="homes.html" class="btn-primary">Browse residences</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border:0"><div>© 2026 SilverOak Residential Properties. <a href="privacy.html">Privacy</a> <a href="terms.html">Terms</a></div><div class="equal-housing">Equal Housing Opportunity</div></div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
