@@ -80,24 +80,20 @@
   }
 
   window.handleForm = function (e, successLabel) {
-    e.preventDefault();
     const form = e.target;
-    if (honeypotFilled(form)) return;
-    if (!captchaOk(form)) return;
+    if (honeypotFilled(form)) {
+      e.preventDefault();
+      return false;
+    }
+    if (!captchaOk(form)) {
+      e.preventDefault();
+      return false;
+    }
     const btn = form.querySelector('.form-submit');
-    const original = btn.textContent;
-    btn.textContent = 'Submitting...';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = 'Request Received ✓';
-      btn.style.background = 'var(--success)';
-      setTimeout(() => {
-        form.reset();
-        btn.textContent = successLabel || original;
-        btn.style.background = '';
-        btn.disabled = false;
-        alert('Thank you. SilverOak Residential Properties has received your request and a representative will contact you shortly.');
-      }, 1400);
-    }, 900);
+    if (btn) {
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+    }
+    return true;
   };
 })();
